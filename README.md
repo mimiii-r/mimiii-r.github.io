@@ -19,6 +19,8 @@ font-family: 'Montserrat', sans-serif;
 color: #fff;
 overflow: hidden;
 user-select: none;
+height: 100vh;
+width: 100vw;
 }
 .background-wrap {
 position: fixed;
@@ -84,7 +86,7 @@ align-items: center;
 transition: opacity 1s ease-in-out;
 }
 .login-card {
-padding: 3.5rem;
+padding: 3rem;
 border: 2px solid var(--pink-accent);
 background: rgba(15, 0, 8, 0.95);
 backdrop-filter: blur(25px);
@@ -124,7 +126,7 @@ opacity: 0;
 visibility: hidden;
 transition: opacity 0.8s ease, transform 0.8s ease;
 transform: scale(1.1);
-padding: 2rem;
+padding: 5vw;
 }
 .slide.active {
 opacity: 1;
@@ -135,6 +137,7 @@ transform: scale(1);
 font-family: 'Bodoni Moda', serif;
 text-transform: uppercase;
 letter-spacing: 0.5rem;
+line-height: 1.1;
 }
 .chrome-text {
 background: var(--chrome);
@@ -146,12 +149,12 @@ font-weight: 900;
 background: #fff;
 color: #000;
 padding: 1rem 3rem;
-font-size: 0.9rem;
+font-size: clamp(0.7rem, 2vw, 1rem);
 text-transform: uppercase;
 letter-spacing: 0.5rem;
 font-weight: 900;
 box-shadow: 0 0 30px #fff, 0 0 60px #ff007f;
-margin-bottom: 4rem;
+margin-bottom: 5vh;
 display: inline-block;
 border-radius: 2px;
 animation: pulse-neon 1.5s infinite ease-in-out;
@@ -164,14 +167,14 @@ animation: pulse-neon 1.5s infinite ease-in-out;
 background: rgba(0, 0, 0, 0.9);
 backdrop-filter: blur(25px);
 border: 1px solid rgba(255, 0, 127, 0.5);
-padding: 3.5rem;
+padding: 3rem;
 max-width: 950px;
 width: 100%;
 box-shadow: 0 0 50px rgba(255, 0, 127, 0.3);
 }
 .avatar-box {
-width: 260px;
-height: 360px;
+width: min(260px, 60vw);
+height: min(360px, 80vw);
 border: 2px solid var(--pink-accent);
 position: relative;
 background: url('https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&q=80&w=400');
@@ -181,7 +184,7 @@ box-shadow: 0 0 35px rgba(255, 0, 127, 0.5);
 }
 .nav-controls {
 position: fixed;
-bottom: 3rem;
+bottom: 5vh;
 width: 100%;
 display: flex;
 justify-content: space-between;
@@ -193,7 +196,7 @@ background: rgba(15, 0, 8, 0.8);
 border: 2px solid var(--pink-accent);
 color: #fff;
 padding: 0.8rem 2rem;
-font-size: 0.8rem;
+font-size: clamp(0.6rem, 1.5vw, 0.8rem);
 text-transform: uppercase;
 letter-spacing: 0.3rem;
 cursor: pointer;
@@ -264,55 +267,55 @@ animation: glitch 0.2s infinite;
 <section class="slide active" id="slide-1">
 <div class="text-center">
 <div class="auth-badge">Authentification Réussie</div>
-<h1 class="luxury-text text-7xl md:text-9xl chrome-text mb-8 leading-tight">PRIVATE<br>MANUEL</h1>
-<div class="mt-20 h-1 w-60 bg-white/30 mx-auto shadow-[0_0_20px_white] rounded-full"></div>
+<h1 class="luxury-text text-7xl md:text-9xl chrome-text mb-8">PRIVATE<br>MANUEL</h1>
+<div class="mt-10 h-1 w-40 bg-white/30 mx-auto shadow-[0_0_20px_white] rounded-full"></div>
 </div>
 </section>
 <section class="slide" id="slide-2">
 <div class="baddie-card">
-<h2 class="luxury-text text-4xl mb-20 text-center text-pink-600 border-b border-pink-900 pb-8">Spécifications</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-20 text-center">
-<div class="space-y-8">
-<div class="text-7xl chrome-text">08</div>
+<h2 class="luxury-text text-4xl mb-12 text-center text-pink-600 border-b border-pink-900 pb-8">Spécifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+<div class="space-y-4">
+<div class="text-6xl chrome-text">08</div>
 <p class="text-[0.8rem] uppercase tracking-widest opacity-60 font-bold">Objets de luxe</p>
 </div>
-<div class="space-y-8">
-<div class="text-7xl chrome-text">01</div>
+<div class="space-y-4">
+<div class="text-6xl chrome-text">01</div>
 <p class="text-[0.8rem] uppercase tracking-widest opacity-60 font-bold">Mission d'élite</p>
 </div>
-<div class="space-y-8">
-<div class="text-7xl chrome-text">+500</div>
+<div class="space-y-4">
+<div class="text-6xl chrome-text">+500</div>
 <p class="text-[0.8rem] uppercase tracking-widest opacity-60 font-bold">Points d'Aura</p>
 </div>
 </div>
 </div>
 </section>
 <section class="slide" id="slide-3">
-<div class="flex flex-col md:flex-row items-center gap-20 max-w-7xl w-full">
+<div class="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full">
 <div class="avatar-box shadow-[0_0_50px_rgba(255,0,127,0.6)]">
 <div class="absolute bottom-6 left-6 bg-black/95 px-6 py-4 text-[0.8rem] uppercase tracking-widest border border-pink-600 font-bold">1m57 | Cheveux Marron Bouclés</div>
 </div>
-<div class="flex-grow space-y-12">
-<div class="flex items-center gap-10">
-<h2 class="luxury-text text-8xl chrome-text">MIMIII</h2>
-<div class="flex gap-5">
-<img src="https://flagcdn.com/w80/ma.png" class="w-14 shadow-2xl border border-white/20" alt="Maroc">
-<img src="https://flagcdn.com/w80/dz.png" class="w-14 shadow-2xl border border-white/20" alt="Algérie">
+<div class="flex-grow space-y-6">
+<div class="flex items-center gap-6">
+<h2 class="luxury-text text-6xl chrome-text">MIMIII</h2>
+<div class="flex gap-4">
+<img src="https://flagcdn.com/w80/ma.png" class="w-10 shadow-2xl border border-white/20" alt="Maroc">
+<img src="https://flagcdn.com/w80/dz.png" class="w-10 shadow-2xl border border-white/20" alt="Algérie">
 </div>
 </div>
-<div class="space-y-6">
-<div class="bg-white/5 p-10 border-r-8 border-pink-600 text-right backdrop-blur-xl">
-<p class="text-[0.7rem] uppercase opacity-40 mb-4 tracking-[0.3rem]">Spécialité</p>
-<p class="text-3xl italic font-black">Colis absurdes mais affectueux</p>
+<div class="space-y-4">
+<div class="bg-white/5 p-6 border-r-8 border-pink-600 text-right backdrop-blur-xl">
+<p class="text-[0.7rem] uppercase opacity-40 mb-2 tracking-[0.3rem]">Spécialité</p>
+<p class="text-2xl italic font-black">Colis absurdes mais affectueux</p>
 </div>
-<div class="bg-white/5 p-10 border-r-8 border-pink-600 text-right backdrop-blur-xl">
-<p class="text-[0.7rem] uppercase opacity-40 mb-4 tracking-[0.3rem]">Compétences</p>
-<p class="text-3xl font-black">Humour douteux & chaos</p>
+<div class="bg-white/5 p-6 border-r-8 border-pink-600 text-right backdrop-blur-xl">
+<p class="text-[0.7rem] uppercase opacity-40 mb-2 tracking-[0.3rem]">Compétences</p>
+<p class="text-2xl font-black">Humour douteux & chaos</p>
 </div>
-<div class="bg-white/5 p-10 border-r-8 border-pink-600 text-right flex items-center justify-end gap-12 backdrop-blur-xl">
+<div class="bg-white/5 p-6 border-r-8 border-pink-600 text-right flex items-center justify-end gap-8 backdrop-blur-xl">
 <div>
-<p class="text-[0.7rem] uppercase opacity-40 mb-4 tracking-[0.3rem]">Le précieux bonus</p>
-<p class="text-3xl font-black">Culotte remplie de caca (miam)</p>
+<p class="text-[0.7rem] uppercase opacity-40 mb-2 tracking-[0.3rem]">Le précieux bonus</p>
+<p class="text-2xl font-black">Culotte remplie de caca (miam)</p>
 </div>
 <div class="poop-jewel">💩✨</div>
 </div>
@@ -321,29 +324,29 @@ animation: glitch 0.2s infinite;
 </div>
 </section>
 <section class="slide" id="slide-4">
-<h2 class="luxury-text text-5xl mb-24 underline decoration-pink-600 decoration-[12px] underline-offset-[15px]">Protocole</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-4xl">
-<div class="p-12 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
-<span class="text-pink-600 font-black text-2xl block mb-8 group-hover:scale-125 transition-transform">01</span>
-<span class="text-2xl uppercase tracking-[0.4rem] font-bold">Ouvrir avec mépris</span>
+<h2 class="luxury-text text-5xl mb-12 underline decoration-pink-600 decoration-[12px] underline-offset-[15px]">Protocole</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+<div class="p-8 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
+<span class="text-pink-600 font-black text-xl block mb-4 group-hover:scale-125 transition-transform">01</span>
+<span class="text-xl uppercase tracking-[0.4rem] font-bold">Ouvrir avec mépris</span>
 </div>
-<div class="p-12 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
-<span class="text-pink-600 font-black text-2xl block mb-8 group-hover:scale-125 transition-transform">02</span>
-<span class="text-2xl uppercase tracking-[0.4rem] font-bold">Analyser la menace</span>
+<div class="p-8 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
+<span class="text-pink-600 font-black text-xl block mb-4 group-hover:scale-125 transition-transform">02</span>
+<span class="text-xl uppercase tracking-[0.4rem] font-bold">Analyser la menace</span>
 </div>
-<div class="p-12 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
-<span class="text-pink-600 font-black text-2xl block mb-8 group-hover:scale-125 transition-transform">03</span>
-<span class="text-2xl uppercase tracking-[0.4rem] font-bold">Ignorer les haters</span>
+<div class="p-8 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
+<span class="text-pink-600 font-black text-xl block mb-4 group-hover:scale-125 transition-transform">03</span>
+<span class="text-xl uppercase tracking-[0.4rem] font-bold">Ignorer les haters</span>
 </div>
-<div class="p-12 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
-<span class="text-pink-600 font-black text-2xl block mb-8 group-hover:scale-125 transition-transform">04</span>
-<span class="text-2xl uppercase tracking-[0.4rem] font-bold">Régner sur l'industrie</span>
+<div class="p-8 border-2 border-white/10 bg-black/70 hover:border-pink-600 transition duration-700 group cursor-default">
+<span class="text-pink-600 font-black text-xl block mb-4 group-hover:scale-125 transition-transform">04</span>
+<span class="text-xl uppercase tracking-[0.4rem] font-bold">Régner sur l'industrie</span>
 </div>
 </div>
 </section>
 <section class="slide" id="slide-6">
 <div class="w-full max-w-3xl text-center">
-<p class="luxury-text text-3xl mb-20 tracking-[2rem] opacity-70 italic font-bold">Aura Sync</p>
+<p class="luxury-text text-3xl mb-12 tracking-[2rem] opacity-70 italic font-bold">Aura Sync</p>
 <div class="h-3 w-full bg-white/10 relative mb-12 rounded-full overflow-hidden">
 <div id="aura-bar" class="h-full bg-pink-600 w-0 shadow-[0_0_50px_#ff007f] rounded-full"></div>
 </div>
@@ -352,7 +355,7 @@ animation: glitch 0.2s infinite;
 </section>
 <section class="slide" id="slide-7">
 <div class="text-center">
-<h2 class="luxury-text text-[12vw] chrome-text mb-16">BYE.</h2>
+<h2 class="luxury-text text-[12vw] chrome-text mb-12">BYE.</h2>
 <button onclick="logout()" class="border-4 border-pink-600 px-24 py-6 text-lg uppercase tracking-[1rem] hover:bg-pink-600 hover:text-black transition duration-700 font-black shadow-[0_0_30px_rgba(255,0,127,0.5)]">LOGOUT</button>
 </div>
 </section>
@@ -360,9 +363,9 @@ animation: glitch 0.2s infinite;
 <button class="btn-nav" onclick="changeSlide(-1)">PRÉCÉDENT</button>
 <button class="btn-nav" onclick="changeSlide(1)">SUIVANT</button>
 </div>
-<div class="fixed top-12 left-12 flex items-center gap-8">
-<div class="w-4 h-4 rounded-full bg-pink-600 animate-pulse shadow-[0_0_25px_#ff007f]"></div>
-<span class="text-[0.8rem] uppercase tracking-[0.3rem] opacity-70 font-black italic">CONNEXION: SÉCURISÉE</span>
+<div class="fixed top-6 left-6 flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-pink-600 animate-pulse shadow-[0_0_25px_#ff007f]"></div>
+<span class="text-[0.7rem] uppercase tracking-[0.3rem] opacity-70 font-black italic">CONNEXION: SÉCURISÉE</span>
 </div>
 <script>
 let currentSlide=0;
